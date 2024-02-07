@@ -1,4 +1,4 @@
-import 'package:chat_app/Auth/auth_service.dart';
+import 'package:chat_app/services/Auth/auth_service.dart';
 import 'package:chat_app/components/myButton.dart';
 import 'package:chat_app/components/mySnackBar.dart';
 import 'package:chat_app/components/myTextField.dart';

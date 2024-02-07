@@ -1,5 +1,5 @@
-import 'package:chat_app/Auth/Login_or_Register.dart';
-import 'package:chat_app/Auth/auth_gate.dart';
+import 'package:chat_app/services/Auth/Login_or_Register.dart';
+import 'package:chat_app/services/Auth/auth_gate.dart';
 import 'package:chat_app/firebase_options.dart';
 import 'package:chat_app/screens/LoginScreen.dart';
 import 'package:chat_app/screens/RegisterScreen.dart';
