@@ -1,4 +1,5 @@
 import 'package:chat_app/components/UserTile.dart';
+import 'package:chat_app/controllers/chatscreen_controller.dart';
 import 'package:chat_app/screens/ChatScreen.dart';
 import 'package:chat_app/services/Auth/auth_service.dart';
 import 'package:chat_app/components/my_drawer.dart';
@@ -16,8 +17,15 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Theme.of(context).colorScheme.tertiary,
       appBar: AppBar(
-        title: Text('HomePage'),
+        centerTitle: true,
+        title: Text(
+          'Home',
+        ),
+        elevation: 0,
+        backgroundColor: Colors.transparent,
+        foregroundColor: Theme.of(context).colorScheme.inversePrimary,
       ),
       drawer: MyDrawer(),
       body: _buildUserList(),
@@ -65,6 +73,7 @@ class HomePage extends StatelessWidget {
           Get.to(
               () => ChatScreen(
                     recieverEmail: userdata['email'],
+                    recieverId: userdata['uid'],
                   ),
               transition: Transition.rightToLeft,
               duration: 250.ms);
